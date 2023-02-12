@@ -1,2 +1,2 @@
 - **zipcloud API** を使用
-https://zip-codes.com
+- https://zip-codes.com
