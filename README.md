@@ -1,0 +1,1 @@
+- **zipcloud API** を使用
