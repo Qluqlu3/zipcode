@@ -7,17 +7,17 @@ const rl = readline.createInterface({
 });
 
 rl.question('郵便番号を入力：', (zipCode) => {
-	if (zipCode.length !== 7) {
-		console.log('7桁で入力してください。');
-		return;
-	}
+  if (isNaN(zipCode)) {
+    console.log('数字で入力してください。');
+    return;
+  }
 
-	if (isNaN(zipCode)) {
-		console.log('数字で入力してください');
-		return;
-	}
+  if (zipCode.length !== 7) {
+    console.log('7桁で入力してください。');
+    return;
+  }
 
-	// zipcloud API URLを生成
+  // zipcloud API URLを生成
   const apiUrl = `https://zipcloud.ibsnet.co.jp/api/search?zipcode=${zipCode}`;
 
   // APIリクエストを実行
