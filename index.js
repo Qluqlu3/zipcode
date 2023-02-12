@@ -8,6 +8,10 @@ const rl = readline.createInterface({
 
 rl.question('郵便番号を入力：', (zipCode) => {
   // zipcloud API URLを生成
+  if (zipCode.length !== 7) {
+		console.log('7桁で入力してください。');
+		return;
+	}
   const apiUrl = `https://zipcloud.ibsnet.co.jp/api/search?zipcode=${zipCode}`;
 
   // APIリクエストを実行
